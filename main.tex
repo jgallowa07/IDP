@@ -1,0 +1,94 @@
+\documentclass{paper}
+
+%%%% Patch to make lineno work nicely with amsmath
+% https://tex.stackexchange.com/a/461192
+% \usepackage{lineno}
+\usepackage{amsmath}  %% <- after lineno
+\usepackage{etoolbox} %% <- for \cspreto, \csappto
+% %% Patch 'normal' math environments:
+% \newcommand*\linenomathpatch[1]{%
+%   \cspreto{#1}{\linenomath}%
+%   \cspreto{#1*}{\linenomath}%
+%   \csappto{end#1}{\endlinenomath}%
+%   \csappto{end#1*}{\endlinenomath}%
+% }
+% \linenomathpatch{equation}
+% \linenomathpatch{gather}
+% \linenomathpatch{multline}
+% \linenomathpatch{align}
+% \linenomathpatch{alignat}
+% \linenomathpatch{flalign}
+% \linenumbers%
+% %%%% end patching
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[inline]{showlabels}
+\renewcommand{\showlabelfont}{\tiny\sffamily}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{defn}{Definition}
+\newtheorem{obs}{Observation}
+\newtheorem{alg}{Algorithm}
+
+\newcommand{\median}{\operatorname{median}}
+
+
+
+% http://bytesizebio.net/2013/03/11/adding-supplementary-tables-and-figures-in-latex/
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
+\hyphenation{Ge-nome Ge-nomes hyper-mut-ation through-put}
+% disable bibliography
+\renewcommand{\cite}[2][]{}
+\renewcommand{\bibliography}[1]{}
+\renewcommand{\bibliographystyle}[1][]{}
+\title{Individual Development Plan (June 2022)}
+\author{Will Dumm}
+
+\begin{document}
+\maketitle
+
+
+\section*{Career Goals}
+
+\subsubsection*{Long-Term and 10-year Goals}
+
+\subsubsection*{Last Year's Achievements}
+
+\subsubsection*{This Year's Goals}
+
+\section*{Development of Project-Specific Knowledge}
+\subsubsection*{Project Description}
+
+\subsubsection*{New Skills and Knowledge Gained}
+
+\subsubsection*{Skills and Knowledge Needed}
+
+\section*{Career Skills}
+
+\subsubsection*{Strengths}
+
+\subsubsection*{Opportunities for Improvement}
+
+\subsubsection*{Communication Skills Development}
+
+\subsubsection*{Opportunities for Contacts and Collaboration}
+
+
+\nocite{*}
+\bibliography{main}
+
+
+\end{document}
